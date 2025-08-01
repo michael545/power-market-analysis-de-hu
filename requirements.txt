@@ -1,0 +1,6 @@
+pandas
+entsoe-py
+matplotlib
+seaborn
+plotly
+jupyterlab
