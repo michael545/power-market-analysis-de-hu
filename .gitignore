@@ -1,17 +1,17 @@
-# Ignore virtual environment
+#  virtual environment
 venv/
 .env
 
-# Ignore data files
+# data files
 data/raw/
 data/processed/
 
-# Ignore Jupyter Notebook checkpoints
+#  Notebook checkpoints
 .ipynb_checkpoints/
 
-# Ignore Python cache
+# python cache
 __pycache__/
 *.pyc
 
-# Ignore reports
+# ignore reports
 reports/figures/

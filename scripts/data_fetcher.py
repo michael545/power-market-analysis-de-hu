@@ -1,1 +1,1 @@
-#  to download data from ENTSO-E, etc.
+#  download data from ENTSO-E, etc.

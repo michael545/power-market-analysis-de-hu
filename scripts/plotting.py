@@ -1,1 +1,1 @@
-# Custom functions for creating standardized charts
+# nice functs for creating standardized charts
