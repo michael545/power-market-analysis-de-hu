@@ -4,11 +4,11 @@ This project is an in-depth analysis of the spot electricity prices and their fu
 
 ## Project Goals
 
-1.  **Data Collection:** Gather relevant market data for the specified periods.
-2.  **Data Analysis:** Conduct a comprehensive review of the collected data using visualizations and statistical summaries.
+1.  **Data Collection:** relevant market data for the specified periods +- 2weeks.
+2.  **Data Analysis:** Comprehensive review of the collected data with visualizations and statistical summaries.
 3.  **Price Driver Assessment:** Determine the primary factors affecting:
     *   The week-over-week evolution of DE spot prices.
-    *   The price differential between DE and Hungary.
+    *   The price delta between DE and HU.
 4.  **Advanced Simulation (Optional):**
 
 ## Data Sources
@@ -20,7 +20,7 @@ This project is an in-depth analysis of the spot electricity prices and their fu
     *   ENTSO-E Transparency Platform for:
         *   Generation data (Solar, Wind)
         *   Load (consumption) data
-        *   Net export/import balance for CWE region, Hungary, Romania, Bulgaria, Slovenia, and Croatia.
+        *   Net export/import balance for CWE, Hungary, Romania, Bulgaria, Slovenia, and Croatia.
 
 ## Repository Structure
 
@@ -45,11 +45,24 @@ This project is an in-depth analysis of the spot electricity prices and their fu
 
 ## Setup
 
-To run the , install the required Python libraries:
+### Option 1: Using Conda (Recommended)
+```bash
+# Create environment from file
+conda env create -f environment.yml
+
+# Activate environment
+conda activate power-market-env
+
+
+### Option 2: Using pip
+To run the analysis, install the required Python libraries:
 
 ```bash
 pip install -r requirements.txt
 ```
+
+### ENTSO-E API Setup
+Free account at [ENTSO-E Transparency Platform](https://transparency.entsoe.eu/) and get the API token.
 
 ## Analysis Workflow
 
