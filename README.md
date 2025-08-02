@@ -9,7 +9,7 @@ This project is an in-depth analysis of the spot electricity prices and their fu
 3.  **Price Driver Assessment:** Determine the primary factors affecting:
     *   The week-over-week evolution of DE spot prices.
     *   The price differential between DE and Hungary.
-4.  **Advanced Simulation (Optional):** If feasible, simulate price calculations for the period using a simplified FBMC model.
+4.  **Advanced Simulation (Optional):**
 
 ## Data Sources
 
