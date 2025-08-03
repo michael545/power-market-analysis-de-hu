@@ -25,7 +25,6 @@ def fetch_entsoe_data(api_key, start_date, end_date, output_dir):
         except Exception as e:
             print(f"Error for {country}: {e}")
 
-    # 2. generati and load
     for country in countries:
         try:
             print(f"Fetching generation and load for {country}...")
@@ -38,10 +37,11 @@ def fetch_entsoe_data(api_key, start_date, end_date, output_dir):
         except Exception as e:
             print(f"Error fetching generation and load for {country}: {e}")
 
-    # net bilance
-    cwe_countries = ["AT", "BE", "FR", "DE_LU", "NL"]
-    other_countries = ["HU", "RO", "BG", "SI", "HR"]
+    # neto bilance
+    cwe_countries = ["AT", "BE", "FR", "DE_LU", "NL", "SK", "CZ", "PL"]# FBMC 13 with LU/DE merged
+    other_countries = ["HU", "RO", "SI", "HR"]
     all_countries = cwe_countries + other_countries
+    #all_countries = list(NEIGHBOURS.keys())  # 
 
     for country_from in all_countries:
         for country_to in all_countries:

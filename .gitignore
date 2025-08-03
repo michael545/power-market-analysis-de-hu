@@ -1,11 +1,8 @@
-#  virtual environment
 venv/
 .env
-
 data/raw/
 data/processed/
 
-# checkpoints
 .ipynb_checkpoints/
 
 __pycache__/
@@ -13,3 +10,6 @@ __pycache__/
 
 # reports
 reports/figures/
+.idea
+data_modules/__pycache__/
+*.py[cod]
