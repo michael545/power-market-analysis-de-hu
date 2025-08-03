@@ -2,16 +2,14 @@
 venv/
 .env
 
-# data files
 data/raw/
 data/processed/
 
-#  Notebook checkpoints
+# checkpoints
 .ipynb_checkpoints/
 
-# python cache
 __pycache__/
 *.pyc
 
-# ignore reports
+# reports
 reports/figures/
