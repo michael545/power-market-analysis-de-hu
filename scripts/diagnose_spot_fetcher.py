@@ -8,8 +8,8 @@ if __name__ == "__main__":
     
     api_key = os.getenv("ENTSOE_API_KEY")
     try:
-        start_date = pd.Timestamp("2025-07-07", tz="Europe/Brussels") # Start of week 28, 2025
-        end_date = pd.Timestamp("2025-08-04", tz="Europe/Brussels")   # End of week 31, 2025 
+        start_date = pd.Timestamp("2025-07-07", tz="Europe/Brussels") # [0] week 28, 
+        end_date = pd.Timestamp("2025-08-04", tz="Europe/Brussels")   # [end] week 31 
 
         client = EntsoePandasClient(api_key=api_key)
         de_prices = client.query_day_ahead_prices('DE_LU', start=start_date, end=end_date)

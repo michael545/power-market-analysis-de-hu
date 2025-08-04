@@ -2,7 +2,7 @@
 
 This project is an in-depth analysis of the spot electricity prices and their fundamental ridvers in Germany and Hungary for weeks 29 and 30 of  2025. IT aims to identify the key factors influencing price levels and the spread between the two countries.
 
-## Project Goals
+## Goals
 
 1.  **Data Collection:** relevant market data for the specified periods +- 2weeks.
 2.  **Data Analysis:** Comprehensive review of the collected data with visualizations and statistical summaries.
