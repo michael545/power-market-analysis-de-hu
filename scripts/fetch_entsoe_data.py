@@ -37,7 +37,7 @@ def fetch_entsoe_data(api_key, start_date, end_date, output_dir):
         except Exception as e:
             print(f"Error fetching generation and load for {country}: {e}")
 
-    # neto bilance
+    # neto flow
     cwe_countries = ["AT", "BE", "FR", "DE_LU", "NL", "SK", "CZ", "PL"]# FBMC 13 with LU/DE merged
     other_countries = ["HU", "RO", "SI", "HR"]
     all_countries = cwe_countries + other_countries
@@ -65,7 +65,6 @@ if __name__ == "__main__":
     start = pd.Timestamp("2025-07-07", tz="Europe/Brussels")
     end = pd.Timestamp("2025-08-04", tz="Europe/Brussels")
 
-    # Define output directory
     output_dir = "C:\\Users\\micha\\code\\power-market-analysis-de-hu\\data\\processed"
 
     fetch_entsoe_data(entsoe_api_key, start, end, output_dir)
