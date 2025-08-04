@@ -7,7 +7,7 @@ import os
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 CITIES = {
-    "DE": ["Berlin", "Munich", "Frankfurt"],  # Reduced for faster processing
+    "DE": ["Berlin", "Munich", "Frankfurt"],  #  faster processing
     "HU": ["Budapest", "Debrecen", "Szeged"]
 }
 
@@ -23,7 +23,7 @@ OUTPUT_DAILY_CSV = "data/raw/daily_max_weather_HU_DE_weeks29_30.csv"
 
 def get_city_coordinates(city_name: str, country_code: str) -> tuple[float, float] | None:
     """
-    Fetches latitude and longitude for a city using the Open-Meteo Geocoding API.
+   get latitude and longitude for a city using  Open-Meteo Geocoding API.
     """
     try:
         params = {'name': city_name, 'count': 1, 'language': 'en', 'format': 'json'}
@@ -43,17 +43,15 @@ def get_city_coordinates(city_name: str, country_code: str) -> tuple[float, floa
         return None
 
 def fetch_hourly_weather_data(latitude: float, longitude: float, start_date: str, end_date: str) -> pd.DataFrame | None:
-    """
-    Fetches historical hourly average temperature for a given location and date range.
-    """
+    
     try:
         params = {
             'latitude': latitude,
             'longitude': longitude,
             'start_date': start_date,
             'end_date': end_date,
-            'hourly': 'temperature_2m',  # Hourly temperature
-            'timezone': 'Europe/Berlin'  # Use Central European Time
+            'hourly': 'temperature_2m',  
+            'timezone': 'Europe/Berlin'  #CET
         }
         response = requests.get(HISTORICAL_API_URL, params=params, timeout=30)
         response.raise_for_status()
@@ -63,14 +61,12 @@ def fetch_hourly_weather_data(latitude: float, longitude: float, start_date: str
             logging.error(f"No hourly data available for lat:{latitude}, lon:{longitude}")
             return None
 
-        # Convert to DataFrame
         df = pd.DataFrame(data['hourly'])
         df.rename(columns={
             'time': 'datetime',
             'temperature_2m': 'temperature'
         }, inplace=True)
         
-        # Convert datetime to pandas datetime
         df['datetime'] = pd.to_datetime(df['datetime'])
         
         return df
@@ -103,14 +99,12 @@ def fetch_daily_max_weather_data(latitude: float, longitude: float, start_date: 
             logging.error(f"No daily data available for lat:{latitude}, lon:{longitude}")
             return None
 
-        # Convert to DataFrame
         df = pd.DataFrame(data['daily'])
         df.rename(columns={
             'time': 'date',
             'temperature_2m_max': 'max_temperature'
         }, inplace=True)
         
-        # Convert date to pandas datetime
         df['date'] = pd.to_datetime(df['date'])
         
         return df
@@ -156,7 +150,6 @@ def main():
                 daily_data.append(daily_df)
                 logging.info(f"Daily max data fetched for {city}: {len(daily_df)} records")
             
-            # Respectful delay
             time.sleep(1)
 
     if hourly_data:
