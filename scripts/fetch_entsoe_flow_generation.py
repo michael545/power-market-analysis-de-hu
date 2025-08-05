@@ -5,13 +5,7 @@ from entsoe.mappings import NEIGHBOURS
 from dotenv import load_dotenv
 
 def fetch_entsoe_data(api_key, start_date, end_date, output_dir):
-    """
-    Args:
-        api_key (str): Your ENTSO-E API key.
-        start_date (pd.Timestamp): Start date for data fetching.
-        end_date (pd.Timestamp): End date for data fetching.
-        output_dir (str): Directory to save the fetched data.
-    """
+
     client = EntsoePandasClient(api_key=api_key)
     os.makedirs(output_dir, exist_ok=True)
 
@@ -33,11 +27,10 @@ def fetch_entsoe_data(api_key, start_date, end_date, output_dir):
             
             generation.to_csv(os.path.join(output_dir, f"{country}_generation.csv"))
             load.to_csv(os.path.join(output_dir, f"{country}_load.csv"))
-            print(f"Successfully fetched and saved generation and load for {country}.")
         except Exception as e:
-            print(f"Error fetching generation and load for {country}: {e}")
+            print(f"fetching generation and load failed for {country}: {e}")
 
-    # neto flow
+    # total flow 
     cwe_countries = ["AT", "BE", "FR", "DE_LU", "NL", "SK", "CZ", "PL"]# FBMC 13 with LU/DE merged
     other_countries = ["HU", "RO", "SI", "HR"]
     all_countries = cwe_countries + other_countries
@@ -52,15 +45,13 @@ def fetch_entsoe_data(api_key, start_date, end_date, output_dir):
                     flows.to_csv(os.path.join(output_dir, f"flows_{country_from}_{country_to}.csv"))
                     print(f"Successfully fetched and saved cross-border flows from {country_from} to {country_to}.")
                 except Exception as e:
-                    print(f"Error fetching cross-border flows from {country_from} to {country_to}: {e}")
+                    print(f"the countries likely not neighbours, fetching cross-border flows from {country_from} to {country_to}: {e}")
 
 
 if __name__ == "__main__":
+
     load_dotenv()
     entsoe_api_key = os.getenv("ENTSOE_API_KEY")
-    if not entsoe_api_key:
-        raise ValueError("ENTSOE_API_KEY wrong")
-
     
     start = pd.Timestamp("2025-07-07", tz="Europe/Brussels")
     end = pd.Timestamp("2025-08-04", tz="Europe/Brussels")
