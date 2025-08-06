@@ -1,5 +1,4 @@
 import pandas as pd
-import numpy as np
 from pathlib import Path
 
 def process_weather_data():
@@ -110,7 +109,7 @@ def process_weather_data():
         
     else:
         pass
-    print("\n===  completed! ===")
+    print("\n DONE")
     print(f"saved to: {processed_data_path}")
 
 if __name__ == "__main__":

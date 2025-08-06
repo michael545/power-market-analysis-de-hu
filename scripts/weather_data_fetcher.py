@@ -142,7 +142,6 @@ def main():
                 hourly_data.append(hourly_df)
                 logging.info(f"Hourly data fetched for {city}: {len(hourly_df)} records")
             
-            # Fetch daily max data
             daily_df = fetch_daily_max_weather_data(lat, lon, START_DATE, END_DATE)
             if daily_df is not None and not daily_df.empty:
                 daily_df['city'] = city
