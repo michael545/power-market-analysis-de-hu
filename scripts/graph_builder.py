@@ -54,9 +54,17 @@ def build_flow_graph(data_directory):
 
             flow_data = df.iloc[:, 0].to_dict()
 
+            # --- Correctly merge flow data onto the appropriate edge ---
             if G.has_edge(sender, recipient):
-                nx.set_edge_attributes(G, {(sender, recipient): {"flows": flow_data}})
-
+                existing_flows = G.edges[sender, recipient].get('flows', {})
+                existing_flows.update(flow_data)
+                nx.set_edge_attributes(G, {(sender, recipient): {"flows": existing_flows}})
+            
+            elif G.has_edge(recipient, sender):
+                negated_flow_data = {timestamp: -value for timestamp, value in flow_data.items()}
+                existing_flows = G.edges[recipient, sender].get('flows', {})
+                existing_flows.update(negated_flow_data)
+                nx.set_edge_attributes(G, {(recipient, sender): {"flows": existing_flows}})
 
     print("built graph with flow data.")
     return G
