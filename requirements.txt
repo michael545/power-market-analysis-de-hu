@@ -24,3 +24,5 @@ lxml>=4.9.0
 
 jupyter-console>=6.6.0
 ipykernel>=6.25.0
+networkx>=3.0
+dash>=2.14.0
