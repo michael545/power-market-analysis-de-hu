@@ -2,7 +2,7 @@
 
 ## A Comparative Study of Weeks 29 & 30, 2025
 
-This report provides an analysis of the German (DE) and Hungarian (HU) electricity markets for Weeks 29 and 30, 2025. It focuses on the fundamental drivers of the price spread between the two countries and explains the dramatic increase in volatility observed in Week 30, driven by a regional high temps and structural market vulnerabilities.
+This report provides an analysis of the German (DE) and Hungarian (HU) electricity markets for weeks 29 and 30 of  2025. It focuses on the fundamental drivers of the price spread between the two countries and explains the dramatic increase in volatility in Hungary observed in week 30, driven by a regional high temps and structural market inefficiencies.
 
 ---
 
@@ -16,7 +16,7 @@ An analysis of the generation, load, and net positions (export - import) for bot
 *(See also: figures/DE_LU_wk30_load_gen_delta_price.png)*
 
 ![DE total generation by source](figures/DE_generation_mix.png)
-* **Generation Profile**: Germany's generation is highly dynamic, driven by a massive fleet of variable renewables. Solar power dictates the daily profile, causing generation to peak significantly during daytime hours.
+* **Generation Profile**: Germany's generation is highly dynamic **Figure 2: DE total generation by source**, driven by a massive fleet of variable renewables. Solar power dictates the daily profile, causing generation to peak significantly during daytime hours.
 * **Net Position**: While Germany has become a net importer on an annual basis, its massive solar fleet allows it to be a significant net exporter during midday hours (green bars). However, it faces the "solar cliff" in the evening: as solar generation collapses, Germany must rely on imports and its own flexible power plants to meet sustained demand, a key vulnerability during heatwaves.
 
 #### Hungary (HU): A Baseload-Driven Importer
