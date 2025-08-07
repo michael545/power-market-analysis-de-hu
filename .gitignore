@@ -10,7 +10,7 @@ __pycache__/
 
 # reports
 *.pdf
-reports/figures/
+reports/docs/
 .idea
 data_modules/__pycache__/
 *.py[cod]
