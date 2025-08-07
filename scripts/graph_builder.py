@@ -11,9 +11,8 @@ from scripts.config import graph_config
 
 def build_flow_graph(data_directory):
     """
-        nx.DiGraph: w time-series flow data as edges.
+    nx.DiGraph: time-series flow data as edges.
     """
-    # 1. Create the base graph from the configuration
     G = nx.DiGraph()
     for country, neighbors_list in graph_config.NEIGHBORS.items():
         G.add_node(country, pos=graph_config.NODE_POSITIONS.get(country))
@@ -48,13 +47,12 @@ def build_flow_graph(data_directory):
             
             if df.index.tz is None:
                 df.index = df.index.tz_localize('UTC')
-            # standardize UTC for consistency
+            # standard UTC for consistency
             else:
                 df.index = df.index.tz_convert('UTC')
-
+                
             flow_data = df.iloc[:, 0].to_dict()
-
-            # --- Correctly merge flow data onto the appropriate edge ---
+            # merge flow data to right vertex ---
             if G.has_edge(sender, recipient):
                 existing_flows = G.edges[sender, recipient].get('flows', {})
                 existing_flows.update(flow_data)

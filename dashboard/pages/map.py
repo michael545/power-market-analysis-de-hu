@@ -5,13 +5,13 @@ import pandas as pd
 import numpy as np
 from functools import lru_cache
 
-# Import necessary functions and data at the top level
+# 
 from scripts.graph_builder import build_flow_graph
 from scripts.config.graph_config import NODE_POSITIONS
 
 dash.register_page(__name__, path='/map')
 
-# --- Data Loading Function with Caching ---
+#loading the data with caching
 @lru_cache(maxsize=None)
 def get_flow_graph():
     """
@@ -27,7 +27,7 @@ def get_flow_graph():
         print(f"!!! Failed to build flow graph: {e} !!!")
         return None
 
-# --- Helper function to get timestamps and labels ---
+# helper get timestamps and labels
 def get_time_data(flow_graph):
     """
     Extracts timestamps and labels from the flow graph.
@@ -35,7 +35,7 @@ def get_time_data(flow_graph):
     if not flow_graph or not flow_graph.edges:
         return [], {}
 
-    # Find the first edge that has flow data
+    # first edge that has flow data
     edge_with_data = next((e for e in flow_graph.edges(data=True) if 'flows' in e[2] and e[2]['flows']), None)
     
     if not edge_with_data:
@@ -43,7 +43,7 @@ def get_time_data(flow_graph):
 
     timestamps = list(edge_with_data[2]['flows'].keys())
     
-    # Create user-friendly labels for the timestamps
+    # friendly labels for the timestamps
     if timestamps and isinstance(timestamps[0], str):
         time_labels = {i: pd.to_datetime(ts).strftime('%Y-%m-%d %H:%M') for i, ts in enumerate(timestamps)}
     elif timestamps:
@@ -53,11 +53,10 @@ def get_time_data(flow_graph):
         
     return timestamps, time_labels
 
-# --- Load data once ---
+# only data once
 flow_graph = get_flow_graph()
 timestamps, time_labels = get_time_data(flow_graph)
 
-# --- Page Layout ---
 def layout():
     """
     Defines the layout of the page.
