@@ -2,19 +2,20 @@
 
 ## A Comparative Study of Weeks 29 & 30, 2025
 
-This report provides an analysis of the German (DE) and Hungarian (HU) electricity markets for Weeks 29 and 30, 2025. It focuses on the fundamental drivers of the price spread between the two countries and explains the dramatic increase in volatility observed in Week 30, driven by a regional heatwave and structural market vulnerabilities.
+This report provides an analysis of the German (DE) and Hungarian (HU) electricity markets for Weeks 29 and 30, 2025. It focuses on the fundamental drivers of the price spread between the two countries and explains the dramatic increase in volatility observed in Week 30, driven by a regional high temps and structural market vulnerabilities.
 
 ---
 
 ### Weekly Comparison: Market Fundamentals
 
-An analysis of the generation, load, and net positions for both countries reveals their fundamentally different operational profiles.
+An analysis of the generation, load, and net positions (export - import) for both countries reveals their fundamentally different operational profiles.
 
 #### Germany (DE): A Renewables-Driven Importer
 
 ![DE Load, Generation, and Net Position for Week 29](figures/DE_LU_wk29_load_gen_delta_price.png)
 *(See also: figures/DE_LU_wk30_load_gen_delta_price.png)*
 
+![DE total generation by source](figures/DE_generation_mix.png)
 * **Generation Profile**: Germany's generation is highly dynamic, driven by a massive fleet of variable renewables. Solar power dictates the daily profile, causing generation to peak significantly during daytime hours.
 * **Net Position**: While Germany has become a net importer on an annual basis, its massive solar fleet allows it to be a significant net exporter during midday hours (green bars). However, it faces the "solar cliff" in the evening: as solar generation collapses, Germany must rely on imports and its own flexible power plants to meet sustained demand, a key vulnerability during heatwaves.
 
@@ -22,6 +23,7 @@ An analysis of the generation, load, and net positions for both countries reveal
 
 ![HU Load, Generation, and Net Position for Week 29](figures/HU_wk29_load_gen_delta_price.png)
 *(See also: figures/HU_wk30_load_gen_delta_price.png)*
+![HU total generation by source](figures/HU_generation_mix.png)
 
 * **Generation Profile**: Hungary's generation is an order of magnitude smaller than Germany's and is characterized by a flat, inflexible profile. This is typical of a system dominated by baseload assets like nuclear power, which cannot ramp up and down quickly to follow demand.
 * **Net Position**: A critical structural weakness is exposed here. The delta between peak demand and its inflexible generation capacity is the primary driver of its market behavior. This forces Hungary to be a consistent net importer (large purple bars), particularly during morning and evening peak hours when this delta is at its widest.
