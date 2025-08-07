@@ -16,8 +16,7 @@ An analysis of the generation, load, and net positions (export - import) for bot
 *(See also: figures/DE_LU_wk30_load_gen_delta_price.png)*
 
 ![DE total generation by source](figures/DE_generation_mix.png)
-* **Generation Profile**: Germany's generation is highly dynamic **DE total generation by source**, driven by a massive fleet of variable renewables. Solar power and wind dictate the daily profile, causing generation to peak significantly during daytime hours.
-* **Net Position**: While Germany has become a net importer on an annual basis, its massive solar fleet allows it to be a significant net exporter during midday hours (green bars on 3 days during week 29). However, it faces the "solar cliff" in the evening: as solar generation collapses, Germany must rely on imports and its own flexible power plants to meet sustained demand, a key vulnerability during heatwaves.
+- **Germany's Generation Profile**: Germany's generation is highly dynamic, driven by a massive fleet of variable renewables. Solar power and wind dictate the daily profile, causing generation to peak significantly during daytime hours. This creates a "merit order effect" where cheap solar and wind power suppress daytime prices, often pushing them below those of neighboring countries. However, this also creates a "solar cliff" in the evening: as solar generation collapses, Germany must rely on imports and its own flexible power plants to meet sustained demand. This evening ramp is a key vulnerability, especially during heatwaves when demand remains high after sunset.
 
 #### Hungary (HU): A Baseload-Driven Importer
 
@@ -25,8 +24,7 @@ An analysis of the generation, load, and net positions (export - import) for bot
 *(See also: figures/HU_wk30_load_gen_delta_price.png)*
 ![HU total generation by source](figures/HU_generation_mix.png)
 
-* **Generation Profile**: Hungary's generation is an order of magnitude smaller than Germany's as seen on **DE vs HU Generation Mix for Weeks 29 & 30** and is characterized by a flat, inflexible profile. This is typical of a system dominated by baseload assets like nuclear, which lack the ability ramp up and down quickly to follow quick demand changes.
-* **Net Position**: A critical structural weakness is exposed here. The delta between peak demand and its inflexible generation capacity is the primary driver of its market behavior. This forces Hungary to be a consistent net importer (large purple bars), particularly during morning and evening peak hours when this delta is at its widest.
+- **Hungary's 'Perfect Storm'**: Hungary's market design flaws create a "perfect storm" during high-demand periods. Its generation is dominated by inflexible baseload power (like nuclear), which cannot ramp up quickly to meet peak demand. This creates a structural dependency on imports. During a regional heatwave, neighboring countries are also desperate for power, leading to a "load squeeze" where Hungary is forced to pay exorbitant prices for imports. This is exacerbated by physical constraints on cross-border transmission lines, which can become congested, further limiting supply and amplifying price spikes. The result is extreme price volatility, as seen in Week 30, where prices decoupled entirely from the more stable German market.
 
 #### Generation Mix at a Glance
 
