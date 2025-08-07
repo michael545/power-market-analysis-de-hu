@@ -39,7 +39,7 @@ This visual starkly contrasts Germany's massive, solar-dominated (yellow) and wi
 The structural differences between the two markets materialize in the price spread `(HU Price - DE Price)`. While Week 29 showed a manageable spread, Week 30 saw an explosion in volatility driven almost entirely by the Hungarian market.
 
 #### Price & Spread Evolution (Week 29 vs. Week 30)
-![Spread across 4 weeks  of july](figures\HU_DE_LUspread_linear_scale.png)
+![Spread across 4 weeks  of july](figures/HU_DE_LUspread_linear_scale.png)
 ![Comparison of DE and HU Prices for Weeks 29 & 30](figures/DE_HU_prices.png)
 ![Comparison of HU-DE Spread for Weeks 29 & 30](figures/weeks_29_30_comparions_spread.png)
 
