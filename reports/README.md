@@ -57,6 +57,7 @@ The extreme price spikes originate from Hungary's structural vulnerabilities, wh
 3.  **Complex Cross-Border Flows**: The `figures/graph-flow_visuzlizer-app.jpg` hints at the complex flow dynamics. While Hungary is importing heavily from the north and west (e.g., Slovakia, Austria, Slovenia, where prices are lower), it may simultaneously be exporting or see reduced import capacity from the south and east due to the regional squeeze. During peak demand, flows from Slovakia (SK) alone can reach up to 2 GW to help meet the deficit. This makes Hungary a critical but vulnerable transit hub. In contrast, Germany can leverage more diverse and resilient partners like France (nuclear) and the Nordic countries (hydro), giving it more options to manage price volatility.
 
 ---
+![spread vs temp graph week 30 and 29](figures/spread_vs_temp.png)
 
 ### Conclusion
 
