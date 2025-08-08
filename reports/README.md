@@ -10,7 +10,9 @@ This report provides an analysis of the German (DE) and Hungarian (HU) electrici
 
 An analysis of the generation, load, and net positions (export - import) for both countries reveals their fundamentally different operational profiles.
 ![DE HU Prices](figures/DE_HU_prices.png)
-`
+(Day ahead market prices week on week comparison for weeks 29 and 30 of 2025 for Germany and Hungary)
+
+
 #### Germany (DE): A Renewables-Driven Importer
 
 ![DE Load, Generation, and Net Position for Week 29](figures/DE_LU_wk29_load_gen_delta_price.png)
