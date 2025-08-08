@@ -59,6 +59,12 @@ This project is an ammateur analysis of the spot electricity prices and their fu
 └── README.md           # This file.
 ```
 
+## Dashboard App
+
+A simple Dash application is included to visualize the cross-border electricity flows between the countries in the dataset. This allows for an interactive exploration of the network graph at different timestams.
+
+![Flow Visualizer App](reports/figures/graph-flow_visuzlizer-app.png)
+
 ## Setup
 
 ### Option 1: via Conda (Recommended)
