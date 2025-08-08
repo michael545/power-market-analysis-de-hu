@@ -41,7 +41,7 @@ An analysis of the generation, load, and net positions for both countries reveal
 *A comparison of the generation mix for Germany and Hungary during weeks 29 and 30.*
 ![DE vs HU Generation Mix for Weeks 29 & 30](figures/DE_HU_GEN_CONSUMPTION_weeks_29_30.png)
 
-> This visual contrasts Germany's massive, solar-dominated (yellow) and wind-influenced (light blue) generation mix with Hungary's much smaller and flatter profile. This difference in generation philosophy is the root cause of the diverging market dynamics.
+> This visual contrasts Germany's massive, solar-dominated (yellow) and wind-influenced (light blue) generation mix with Hungary's much smaller and flatter profile. This difference in generation capacity is the root cause of the diverging market dynamics.
 
 ---
 

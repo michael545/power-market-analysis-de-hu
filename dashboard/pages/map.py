@@ -5,13 +5,12 @@ import pandas as pd
 import numpy as np
 from functools import lru_cache
 
-# 
 from scripts.graph_builder import build_flow_graph
 from scripts.config.graph_config import NODE_POSITIONS
 
 dash.register_page(__name__, path='/map')
 
-#loading the data with caching
+#get data with caching
 @lru_cache(maxsize=None)
 def get_flow_graph():
     """
@@ -43,7 +42,7 @@ def get_time_data(flow_graph):
 
     timestamps = list(edge_with_data[2]['flows'].keys())
     
-    # friendly labels for the timestamps
+    # labels for the timestamps !!! note the UTC +2.00
     if timestamps and isinstance(timestamps[0], str):
         time_labels = {i: pd.to_datetime(ts).strftime('%Y-%m-%d %H:%M') for i, ts in enumerate(timestamps)}
     elif timestamps:
@@ -64,7 +63,7 @@ def layout():
     if not flow_graph or not timestamps:
         return html.Div([
             html.H2("Error: Could Not Load Graph Data"),
-            html.P("The application was unable to load or process the flow data. Please check the terminal for error messages from the 'build_flow_graph' script.")
+            html.P("unable to load or process the flow data, check error messages from the 'build_flow_graph' script.")
         ])
 
     return html.Div([
@@ -87,15 +86,12 @@ def layout():
         )
     ])
 
-# --- Callbacks ---
 @callback(
     Output('network-map', 'figure'),
     Input('time-slider', 'value')
 )
 def update_map(time_index):
-    """
-    Updates the map figure when the time slider's value changes.
-    """
+
     if time_index is None:
         return dash.no_update
 
