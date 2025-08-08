@@ -15,30 +15,34 @@ An analysis of the generation, load, and net positions (export - import) for bot
 #### Germany (DE): A Renewables-Driven Importer
 
 ![DE Load, Generation, and Net Position for Week 29](figures/DE_LU_wk29_load_gen_delta_price.png)
-*(See also: figures/DE_LU_wk30_load_gen_delta_price.png)*
+(Germany load, generation, net balance and price)
+![DE Load, Generation, and Net Position for Week 30](figures/DE_LU_wk30_load_gen_delta_price.png)
 
+- **Germany's Generation Profile**:
 ![DE total generation by source](figures/DE_generation_mix.png)
-- **Germany's Generation Profile**: Germany's generation is highly dynamic, driven by a massive fleet of variable renewables. Solar power and wind dictate the daily profile, causing generation to peak significantly during daytime hours. This creates a "merit order effect" where cheap solar and wind power suppress daytime prices, often pushing them below those of neighboring countries. However, this also creates a "solar cliff" in the evening: as solar generation collapses, Germany must rely on imports and its own flexible power plants to meet sustained demand. This evening ramp is a key vulnerability, especially during heatwaves when demand remains high after sunset.
+ Germany's generation is highly dynamic, driven by a massive fleet of variable renewables. Solar power and wind dictate the daily profile, causing generation to peak significantly during daytime hours. This creates a "merit order effect" where cheap solar and wind power suppress daytime prices, often pushing them below those of neighboring countries. However, this also creates a "solar cliff" in the evening: as solar generation collapses, Germany must rely on imports and its own flexible power plants to meet sustained demand. This evening ramp is a key vulnerability, especially during heatwaves when demand remains high after sunset.
 
 #### Hungary (HU): A Baseload-Driven Importer
 
 ![HU Load, Generation, and Net Position for Week 29](figures/HU_wk29_load_gen_delta_price.png)
-*(See also: figures/HU_wk30_load_gen_delta_price.png)*
+(Hungary load, generation, net balance and price)
+![HU Load, Generation, and Net Position for Week 30](figures/HU_wk30_load_gen_delta_price.png)
+- **Hungary's Generation Profile**:
 ![HU total generation by source](figures/HU_generation_mix.png)
 
-- **Hungary's 'Perfect Storm'**: Hungary's market design flaws create a "perfect storm" during high-demand periods. Its generation is dominated by inflexible baseload power (like nuclear), which cannot ramp up quickly to meet peak demand. This creates a structural dependency on imports. During a regional heatwave, neighboring countries are also desperate for power, leading to a "load squeeze" where Hungary is forced to pay exorbitant prices for imports. This is exacerbated by physical constraints on cross-border transmission lines, which can become congested, further limiting supply and amplifying price spikes. The result is extreme price volatility, as seen in Week 30, where prices decoupled entirely from the more stable German market.
+- **Hungary's 'Perfect Storm'**: Hungary's market design flaws create a "perfect storm" during high-demand periods. Its generation is dominated by inflexible baseload power (like nuclear), which cannot ramp up quickly to meet peak demand. This creates a structural dependency on imports. During a regional heatwave, neighboring countries are also desperate for power, leading to a "load squeeze" where Hungary is forced to pay exorbitant prices for imports. This is exacerbated by physical constraints on cross-border transmission lines, which can become congested, further limiting supply and amplifying price spikes. The result is severe price volatility, as seen in Week 30, where prices decoupled entirely from the more stable German market.
 
 #### Generation Mix at a Glance
 
 ![DE vs HU Generation Mix for Weeks 29 & 30](figures/DE_HU_GEN_CONSUMPTION_weeks_29_30.png)
-
-This visual starkly contrasts Germany's massive, solar-dominated (yellow) and wind-influenced (light blue) generation mix with Hungary's much smaller and flatter profile. This difference in generation philosophy is the root cause of the diverging market dynamics and price spreads.
+(Hungary and Germany generation mix compared for the weeks 29 and 30)
+This visual contrasts Germany's massive, solar-dominated (yellow) and wind-influenced (light blue) generation mix with Hungary's much smaller and flatter profile. This difference in generation philosophy is the root cause of the diverging market dynamics and price spreads.
 
 ---
 
 ### HU-DE Spread Analysis: From Stability to Extreme Volatility
 
-The structural differences between the two markets materialize in the price spread `(HU Price - DE Price)`. While Week 29 showed a manageable spread, Week 30 saw an explosion in volatility driven almost entirely by the Hungarian market and temperatures often reaching over 30 degrees celsisus.
+The structural differences between the two markets materialize in the price spread `(HU Price - DE Price)`. While Week 29 showed a manageable spread, Week 30 saw an explosion in volatility driven almost entirely by the Hungarian market and average temperatures often reaching over 30 degrees celsisus.
 
 #### Price & Spread Evolution (Week 29 vs. Week 30)
 ![Comparison of DE and HU Prices for Weeks 29 & 30](figures/DE_HU_prices.png)
