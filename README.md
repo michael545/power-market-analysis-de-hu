@@ -1,6 +1,5 @@
 # Power Market Analysis: DE vs. HU (Weeks 29 & 30, 2025)
 
-
 This project is an ammateur analysis of the spot electricity prices and their fundamental dridvers in Germany and Hungary for weeks 29 and 30 of  2025. It aims to identify the key factors influencing price levels and the spread between the two countries.
 
 ## Preliminary
@@ -40,40 +39,38 @@ This project is an ammateur analysis of the spot electricity prices and their fu
 
 ```
 .
+├── dashboard/
+│   └── app.py          # A simple Dash app to visualize network flows for each timestamp (works only for full hours e.g. 16.00).
 ├── data/
-│   ├── processed/      # Cleaned and merged for analysis
-│   └── raw/            # Raw data downloaded from sources
+│   ├── processed/      # Cleaned/merged data ready for analysis.
+│   └── raw/            # Some raw data downloaded manually from sources.
 ├── notebooks/
-│   ├── 01_data_acquisition.ipynb
-│   ├── 02_data_preprocessing.ipynb
-│   ├── 03_exploratory_data_analysis.ipynb
-│   └── 04_price_driver_analysis.ipynb
+│   ├── 02_ENTSO-e_get_DATA.ipynb # test for fetching data from ENTSO-E.
+│   └── 03_visualization.ipynb    # Notebook for visualizing the data and generating figures and plots (the meat of the analysis).
 ├── reports/
-│   └── figures/        # Generated plots and visuals
-├── scripts/
-│   ├── data_fetcher.py # Scripts to download data from APIs/websites
-│   ├── 
-│   └── 
-└── README.md
+│   ├── figures/        # Generated plots and visuals.
+│   └── README.md       # The main analysis report, with figures
+├── scripts/            # Python scripts for various tasks.
+│   ├── config/
+│   ├── entsoe_fetcher.py
+│   └── ...             # Other scripts for data fetching and processing.
+├── environment.yml     # Conda environment file.
+├── requirements.txt    # Pip requirements file.
+└── README.md           # This file.
 ```
 
 ## Setup
 
 ### Option 1: via Conda (Recommended)
 ```bash
-# Create environment from file
 conda env create -f environment.yml
 
-# Activate environment
 conda activate power-market-env
 
-
-### Option 2: Using pip
-To run the analysis, install the required Python libraries:
-
+## Or
 ```bash
 pip install -r requirements.txt
 ```
 
 ### ENTSO-E API Setup
-Free account at [ENTSO-E Transparency Platform](https://transparency.entsoe.eu/) and get the API token via Email request.
+Free account at [ENTSO-E Transparency Platform](https://transparency.entsoe.eu/) and get the API key via Email request.
